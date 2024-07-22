@@ -1,0 +1,14 @@
+{
+    "name": "monolith-repo",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+      "dev": "concurrently \"pnpm --filter backend dev\" \"pnpm --filter frontend dev\"",
+      "build": "pnpm --filter backend build && pnpm --filter frontend build",
+      "start": "concurrently \"pnpm --filter backend start\" \"pnpm --filter frontend start\""
+    },
+    "devDependencies": {
+      "concurrently": "^6.2.1"
+    }
+  }
+  
